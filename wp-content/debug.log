@@ -1,92 +1,240 @@
-[15-Mar-2021 09:20:10 UTC] PHP Parse error:  syntax error, unexpected 'wp_die' (T_STRING) in C:\xampp\htdocs\wordpressplugin\wp-content\plugins\dipu-plugin\dipu-plugin.php on line 47
-[15-Mar-2021 09:55:58 UTC] PHP Notice:  Undefined index: name in C:\xampp\htdocs\wordpressplugin\wp-content\plugins\dipu-plugin\dipu-plugin.php on line 46
-[16-Mar-2021 03:11:59 UTC] PHP Parse error:  syntax error, unexpected end of file in C:\xampp\htdocs\wordpressplugin\wp-content\plugins\dipu-plugin\dipu-plugin.php on line 400
-[16-Mar-2021 03:12:05 UTC] PHP Parse error:  syntax error, unexpected end of file in C:\xampp\htdocs\wordpressplugin\wp-content\plugins\dipu-plugin\dipu-plugin.php on line 400
-[16-Mar-2021 03:20:27 UTC] PHP Parse error:  syntax error, unexpected '$_POST' (T_VARIABLE), expecting ')' in C:\xampp\htdocs\wordpressplugin\wp-content\plugins\dipu-plugin\dipu-plugin.php on line 48
-[16-Mar-2021 03:22:28 UTC] PHP Parse error:  syntax error, unexpected '$_POST' (T_VARIABLE), expecting ')' in C:\xampp\htdocs\wordpressplugin\wp-content\plugins\dipu-plugin\dipu-plugin.php on line 48
-[16-Mar-2021 03:24:28 UTC] PHP Parse error:  syntax error, unexpected '$_POST' (T_VARIABLE), expecting ')' in C:\xampp\htdocs\wordpressplugin\wp-content\plugins\dipu-plugin\dipu-plugin.php on line 48
-[16-Mar-2021 03:26:29 UTC] PHP Parse error:  syntax error, unexpected '$_POST' (T_VARIABLE), expecting ')' in C:\xampp\htdocs\wordpressplugin\wp-content\plugins\dipu-plugin\dipu-plugin.php on line 48
-[16-Mar-2021 03:29:42 UTC] PHP Parse error:  syntax error, unexpected '$_POST' (T_VARIABLE), expecting ')' in C:\xampp\htdocs\wordpressplugin\wp-content\plugins\dipu-plugin\dipu-plugin.php on line 48
-[16-Mar-2021 03:29:49 UTC] PHP Parse error:  syntax error, unexpected '$_POST' (T_VARIABLE), expecting ')' in C:\xampp\htdocs\wordpressplugin\wp-content\plugins\dipu-plugin\dipu-plugin.php on line 48
-[16-Mar-2021 06:53:49 UTC] PHP Fatal error:  Cannot use isset() on the result of an expression (you can use "null !== expression" instead) in C:\xampp\htdocs\wordpressplugin\wp-content\plugins\dipu-plugin\dipu-plugin.php on line 47
-[16-Mar-2021 06:54:15 UTC] PHP Fatal error:  Cannot use isset() on the result of an expression (you can use "null !== expression" instead) in C:\xampp\htdocs\wordpressplugin\wp-content\plugins\dipu-plugin\dipu-plugin.php on line 47
-[16-Mar-2021 06:54:50 UTC] PHP Fatal error:  Cannot use isset() on the result of an expression (you can use "null !== expression" instead) in C:\xampp\htdocs\wordpressplugin\wp-content\plugins\dipu-plugin\dipu-plugin.php on line 47
-[16-Mar-2021 06:56:29 UTC] PHP Fatal error:  Cannot use isset() on the result of an expression (you can use "null !== expression" instead) in C:\xampp\htdocs\wordpressplugin\wp-content\plugins\dipu-plugin\dipu-plugin.php on line 168
-[16-Mar-2021 06:56:30 UTC] PHP Fatal error:  Cannot use isset() on the result of an expression (you can use "null !== expression" instead) in C:\xampp\htdocs\wordpressplugin\wp-content\plugins\dipu-plugin\dipu-plugin.php on line 168
-[16-Mar-2021 06:56:31 UTC] PHP Fatal error:  Cannot use isset() on the result of an expression (you can use "null !== expression" instead) in C:\xampp\htdocs\wordpressplugin\wp-content\plugins\dipu-plugin\dipu-plugin.php on line 168
-[16-Mar-2021 06:56:31 UTC] PHP Fatal error:  Cannot use isset() on the result of an expression (you can use "null !== expression" instead) in C:\xampp\htdocs\wordpressplugin\wp-content\plugins\dipu-plugin\dipu-plugin.php on line 168
-[16-Mar-2021 06:56:50 UTC] PHP Fatal error:  Cannot use isset() on the result of an expression (you can use "null !== expression" instead) in C:\xampp\htdocs\wordpressplugin\wp-content\plugins\dipu-plugin\dipu-plugin.php on line 168
-[16-Mar-2021 06:56:53 UTC] PHP Fatal error:  Cannot use isset() on the result of an expression (you can use "null !== expression" instead) in C:\xampp\htdocs\wordpressplugin\wp-content\plugins\dipu-plugin\dipu-plugin.php on line 168
-[16-Mar-2021 06:56:54 UTC] PHP Fatal error:  Cannot use isset() on the result of an expression (you can use "null !== expression" instead) in C:\xampp\htdocs\wordpressplugin\wp-content\plugins\dipu-plugin\dipu-plugin.php on line 168
-[16-Mar-2021 06:58:51 UTC] PHP Parse error:  syntax error, unexpected ')' in C:\xampp\htdocs\wordpressplugin\wp-content\plugins\dipu-plugin\dipu-plugin.php on line 47
-[16-Mar-2021 09:04:38 UTC] PHP Parse error:  syntax error, unexpected '}' in C:\xampp\htdocs\wordpressplugin\wp-content\plugins\dipu-plugin\dipu-plugin.php on line 36
-[16-Mar-2021 09:06:39 UTC] PHP Warning:  call_user_func_array() expects parameter 1 to be a valid callback, class 'dipuPlugin' does not have a method 'dipu_plugin_load_text_domain' in C:\xampp\htdocs\wordpressplugin\wp-includes\class-wp-hook.php on line 287
-[16-Mar-2021 09:06:39 UTC] PHP Warning:  call_user_func_array() expects parameter 1 to be a valid callback, class 'dipuPlugin' does not have a method 'dipu_plugin_load_text_domain' in C:\xampp\htdocs\wordpressplugin\wp-includes\class-wp-hook.php on line 287
-[16-Mar-2021 09:08:40 UTC] PHP Parse error:  syntax error, unexpected '}' in C:\xampp\htdocs\wordpressplugin\wp-content\plugins\dipu-plugin\dipu-plugin.php on line 41
-[16-Mar-2021 09:18:40 UTC] PHP Warning:  An unexpected error occurred. Something may be wrong with WordPress.org or this server&#8217;s configuration. If you continue to have problems, please try the <a href="https://wordpress.org/support/forums/">support forums</a>. (WordPress could not establish a secure connection to WordPress.org. Please contact your server administrator.) in C:\xampp\htdocs\wordpressplugin\wp-admin\includes\translation-install.php on line 68
-[16-Mar-2021 10:41:20 UTC] PHP Parse error:  syntax error, unexpected ')', expecting variable (T_VARIABLE) or '{' or '$' in C:\xampp\htdocs\wordpressplugin\wp-content\plugins\dipu-plugin\dipu-plugin.php on line 79
-[17-Mar-2021 04:09:09 UTC] PHP Fatal error:  Uncaught Error: Call to a member function add_rewrite_tag() on null in C:\xampp\htdocs\wordpressplugin\wp-includes\rewrite.php:173
-Stack trace:
-#0 C:\xampp\htdocs\wordpressplugin\wp-includes\class-wp-post-type.php(596): add_rewrite_tag('%review%', '([^/]+)', 'review=')
-#1 C:\xampp\htdocs\wordpressplugin\wp-includes\post.php(1447): WP_Post_Type->add_rewrite_rules()
-#2 C:\xampp\htdocs\wordpressplugin\wp-content\plugins\review-plugin\review-plugin.php(50): register_post_type('review', Array)
-#3 C:\xampp\htdocs\wordpressplugin\wp-content\plugins\review-plugin\review-plugin.php(31): ReviewPlugin->review_post_type()
-#4 C:\xampp\htdocs\wordpressplugin\wp-content\plugins\review-plugin\review-plugin.php(25): ReviewPlugin->init_hooks()
-#5 C:\xampp\htdocs\wordpressplugin\wp-content\plugins\review-plugin\review-plugin.php(58): ReviewPlugin->__construct()
-#6 C:\xampp\htdocs\wordpressplugin\wp-settings.php(388): include_once('C:\\xampp\\htdocs...')
-#7 C:\xampp\htdocs\wordpressplugin\wp-config.php(93): require_once('C:\\xam in C:\xampp\htdocs\wordpressplugin\wp-includes\rewrite.php on line 173
-[17-Mar-2021 04:09:34 UTC] PHP Fatal error:  Uncaught Error: Call to a member function add_rewrite_tag() on null in C:\xampp\htdocs\wordpressplugin\wp-includes\rewrite.php:173
-Stack trace:
-#0 C:\xampp\htdocs\wordpressplugin\wp-includes\class-wp-post-type.php(596): add_rewrite_tag('%review%', '([^/]+)', 'review=')
-#1 C:\xampp\htdocs\wordpressplugin\wp-includes\post.php(1447): WP_Post_Type->add_rewrite_rules()
-#2 C:\xampp\htdocs\wordpressplugin\wp-content\plugins\review-plugin\review-plugin.php(50): register_post_type('review', Array)
-#3 C:\xampp\htdocs\wordpressplugin\wp-content\plugins\review-plugin\review-plugin.php(31): ReviewPlugin->review_post_type()
-#4 C:\xampp\htdocs\wordpressplugin\wp-content\plugins\review-plugin\review-plugin.php(25): ReviewPlugin->init_hooks()
-#5 C:\xampp\htdocs\wordpressplugin\wp-content\plugins\review-plugin\review-plugin.php(58): ReviewPlugin->__construct()
-#6 C:\xampp\htdocs\wordpressplugin\wp-settings.php(388): include_once('C:\\xampp\\htdocs...')
-#7 C:\xampp\htdocs\wordpressplugin\wp-config.php(93): require_once('C:\\xam in C:\xampp\htdocs\wordpressplugin\wp-includes\rewrite.php on line 173
-[17-Mar-2021 04:10:34 UTC] PHP Warning:  call_user_func_array() expects parameter 1 to be a valid callback, class 'ReviewPlugin' does not have a method 'register_post_type' in C:\xampp\htdocs\wordpressplugin\wp-includes\class-wp-hook.php on line 287
-[17-Mar-2021 04:10:36 UTC] PHP Warning:  call_user_func_array() expects parameter 1 to be a valid callback, class 'ReviewPlugin' does not have a method 'register_post_type' in C:\xampp\htdocs\wordpressplugin\wp-includes\class-wp-hook.php on line 287
-[17-Mar-2021 04:10:42 UTC] PHP Warning:  call_user_func_array() expects parameter 1 to be a valid callback, class 'ReviewPlugin' does not have a method 'register_post_type' in C:\xampp\htdocs\wordpressplugin\wp-includes\class-wp-hook.php on line 287
-[17-Mar-2021 04:23:41 UTC] PHP Parse error:  syntax error, unexpected '}', expecting '(' in C:\xampp\htdocs\wordpressplugin\wp-content\plugins\review-plugin\review-plugin.php on line 56
-[17-Mar-2021 04:35:46 UTC] PHP Parse error:  syntax error, unexpected '}' in C:\xampp\htdocs\wordpressplugin\wp-content\plugins\review-plugin\review-plugin.php on line 27
-[17-Mar-2021 04:37:46 UTC] PHP Parse error:  syntax error, unexpected '}' in C:\xampp\htdocs\wordpressplugin\wp-content\plugins\review-plugin\review-plugin.php on line 27
-[17-Mar-2021 04:45:07 UTC] PHP Parse error:  syntax error, unexpected '}' in C:\xampp\htdocs\wordpressplugin\wp-content\plugins\review-plugin\review-plugin.php on line 27
-[17-Mar-2021 04:46:08 UTC] PHP Parse error:  syntax error, unexpected '}' in C:\xampp\htdocs\wordpressplugin\wp-content\plugins\review-plugin\review-plugin.php on line 27
-[17-Mar-2021 04:48:09 UTC] PHP Parse error:  syntax error, unexpected '}' in C:\xampp\htdocs\wordpressplugin\wp-content\plugins\review-plugin\review-plugin.php on line 27
-[17-Mar-2021 04:50:09 UTC] PHP Parse error:  syntax error, unexpected '}' in C:\xampp\htdocs\wordpressplugin\wp-content\plugins\review-plugin\review-plugin.php on line 27
-[17-Mar-2021 04:52:09 UTC] PHP Parse error:  syntax error, unexpected 'private' (T_PRIVATE), expecting '(' in C:\xampp\htdocs\wordpressplugin\wp-content\plugins\review-plugin\review-plugin.php on line 34
-[17-Mar-2021 04:54:09 UTC] PHP Parse error:  syntax error, unexpected '}' in C:\xampp\htdocs\wordpressplugin\wp-content\plugins\review-plugin\review-plugin.php on line 35
-[17-Mar-2021 07:10:31 UTC] PHP Parse error:  syntax error, unexpected '}' in C:\xampp\htdocs\wordpressplugin\wp-content\plugins\review-plugin\review-plugin.php on line 44
-[17-Mar-2021 07:12:31 UTC] PHP Parse error:  syntax error, unexpected '}' in C:\xampp\htdocs\wordpressplugin\wp-content\plugins\review-plugin\review-plugin.php on line 74
-[17-Mar-2021 07:14:32 UTC] PHP Parse error:  syntax error, unexpected '}' in C:\xampp\htdocs\wordpressplugin\wp-content\plugins\review-plugin\review-plugin.php on line 74
-[17-Mar-2021 07:18:33 UTC] PHP Parse error:  syntax error, unexpected '}' in C:\xampp\htdocs\wordpressplugin\wp-content\plugins\review-plugin\review-plugin.php on line 75
-[17-Mar-2021 07:26:25 UTC] PHP Parse error:  syntax error, unexpected '}' in C:\xampp\htdocs\wordpressplugin\wp-content\plugins\review-plugin\review-plugin.php on line 77
-[17-Mar-2021 08:01:19 UTC] PHP Parse error:  syntax error, unexpected '}' in C:\xampp\htdocs\wordpressplugin\wp-content\plugins\review-plugin\review-plugin.php on line 45
-[18-Mar-2021 02:43:52 UTC] PHP Parse error:  syntax error, unexpected '}' in C:\xampp\htdocs\wordpressplugin\wp-content\plugins\review-plugin\review-plugin.php on line 98
-[18-Mar-2021 06:16:32 UTC] PHP Notice:  Undefined index: review-desc in C:\xampp\htdocs\wordpressplugin\wp-content\plugins\review-plugin\review-plugin.php on line 97
-[18-Mar-2021 06:16:32 UTC] PHP Warning:  substr() expects parameter 2 to be int, string given in C:\xampp\htdocs\wordpressplugin\wp-content\plugins\review-plugin\review-plugin.php on line 82
-[18-Mar-2021 06:20:27 UTC] PHP Warning:  substr() expects parameter 2 to be int, string given in C:\xampp\htdocs\wordpressplugin\wp-content\plugins\review-plugin\review-plugin.php on line 82
-[18-Mar-2021 06:24:07 UTC] PHP Warning:  substr() expects parameter 2 to be int, string given in C:\xampp\htdocs\wordpressplugin\wp-content\plugins\review-plugin\review-plugin.php on line 82
-[18-Mar-2021 06:29:02 UTC] PHP Warning:  substr() expects parameter 2 to be int, string given in C:\xampp\htdocs\wordpressplugin\wp-content\plugins\review-plugin\review-plugin.php on line 84
-[18-Mar-2021 06:31:37 UTC] PHP Warning:  substr() expects parameter 2 to be int, string given in C:\xampp\htdocs\wordpressplugin\wp-content\plugins\review-plugin\review-plugin.php on line 85
-[18-Mar-2021 07:01:04 UTC] PHP Warning:  substr() expects parameter 2 to be int, string given in C:\xampp\htdocs\wordpressplugin\wp-content\plugins\review-plugin\review-plugin.php on line 85
-[18-Mar-2021 07:01:44 UTC] PHP Warning:  substr() expects parameter 2 to be int, string given in C:\xampp\htdocs\wordpressplugin\wp-content\plugins\review-plugin\review-plugin.php on line 85
-[18-Mar-2021 07:07:15 UTC] PHP Warning:  substr() expects parameter 2 to be int, string given in C:\xampp\htdocs\wordpressplugin\wp-content\plugins\review-plugin\review-plugin.php on line 85
-[18-Mar-2021 07:08:38 UTC] PHP Warning:  substr() expects parameter 2 to be int, string given in C:\xampp\htdocs\wordpressplugin\wp-content\plugins\review-plugin\review-plugin.php on line 85
-[18-Mar-2021 07:12:06 UTC] PHP Parse error:  syntax error, unexpected '[', expecting '(' in C:\xampp\htdocs\wordpressplugin\wp-content\plugins\review-plugin\review-plugin.php on line 84
-[18-Mar-2021 07:15:11 UTC] PHP Warning:  substr() expects parameter 2 to be int, string given in C:\xampp\htdocs\wordpressplugin\wp-content\plugins\review-plugin\review-plugin.php on line 86
-[18-Mar-2021 08:33:25 UTC] PHP Parse error:  syntax error, unexpected 'return' (T_RETURN) in C:\xampp\htdocs\wordpressplugin\wp-content\plugins\review-plugin\review-plugin.php on line 135
-[18-Mar-2021 08:35:25 UTC] PHP Parse error:  syntax error, unexpected 'return' (T_RETURN) in C:\xampp\htdocs\wordpressplugin\wp-content\plugins\review-plugin\review-plugin.php on line 135
-[18-Mar-2021 08:37:26 UTC] PHP Parse error:  syntax error, unexpected 'return' (T_RETURN) in C:\xampp\htdocs\wordpressplugin\wp-content\plugins\review-plugin\review-plugin.php on line 135
-[18-Mar-2021 08:39:27 UTC] PHP Parse error:  syntax error, unexpected 'return' (T_RETURN) in C:\xampp\htdocs\wordpressplugin\wp-content\plugins\review-plugin\review-plugin.php on line 135
-[18-Mar-2021 08:41:28 UTC] PHP Parse error:  syntax error, unexpected 'return' (T_RETURN) in C:\xampp\htdocs\wordpressplugin\wp-content\plugins\review-plugin\review-plugin.php on line 135
-[18-Mar-2021 09:05:25 UTC] PHP Parse error:  syntax error, unexpected 'wp_send_json_success' (T_STRING) in C:\xampp\htdocs\wordpressplugin\wp-content\plugins\review-plugin\review-plugin.php on line 130
-[18-Mar-2021 09:07:26 UTC] PHP Parse error:  syntax error, unexpected 'wp_send_json_success' (T_STRING) in C:\xampp\htdocs\wordpressplugin\wp-content\plugins\review-plugin\review-plugin.php on line 130
-[18-Mar-2021 09:09:26 UTC] PHP Parse error:  syntax error, unexpected 'wp_send_json_success' (T_STRING) in C:\xampp\htdocs\wordpressplugin\wp-content\plugins\review-plugin\review-plugin.php on line 130
-[18-Mar-2021 09:12:15 UTC] PHP Parse error:  syntax error, unexpected 'wp_send_json_success' (T_STRING) in C:\xampp\htdocs\wordpressplugin\wp-content\plugins\review-plugin\review-plugin.php on line 130
-[18-Mar-2021 09:13:15 UTC] PHP Parse error:  syntax error, unexpected 'wp_send_json_success' (T_STRING) in C:\xampp\htdocs\wordpressplugin\wp-content\plugins\review-plugin\review-plugin.php on line 130
-[18-Mar-2021 09:17:16 UTC] PHP Parse error:  syntax error, unexpected ';', expecting ')' in C:\xampp\htdocs\wordpressplugin\wp-content\plugins\review-plugin\review-plugin.php on line 105
-[18-Mar-2021 10:18:48 UTC] PHP Parse error:  syntax error, unexpected 'add_action' (T_STRING) in C:\xampp\htdocs\wordpressplugin\wp-content\plugins\review-plugin\review-plugin.php on line 43
-[19-Mar-2021 02:17:10 UTC] PHP Warning:  require_once(css/style.css): failed to open stream: No such file or directory in C:\xampp\htdocs\wordpressplugin\wp-content\plugins\review-plugin\review-plugin.php on line 79
-[19-Mar-2021 02:17:10 UTC] PHP Fatal error:  require_once(): Failed opening required 'css/style.css' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\wordpressplugin\wp-content\plugins\review-plugin\review-plugin.php on line 79
+[22-Mar-2021 10:41:41 UTC] Array
+(
+    [0] => WP_User Object
+        (
+            [data] => stdClass Object
+                (
+                    [ID] => 61
+                    [user_login] => dorewu
+                    [user_pass] => $P$Bx93nC.EDflg53SSjAlf0cDXiKRX5j/
+                    [user_nicename] => dorewu
+                    [user_email] => dorewu@mailinator.com
+                    [user_url] => 
+                    [user_registered] => 2021-03-22 06:44:03
+                    [user_activation_key] => 
+                    [user_status] => 0
+                    [display_name] => dorewu
+                )
+
+            [ID] => 61
+            [caps] => Array
+                (
+                    [subscriber] => 1
+                )
+
+            [cap_key] => wp_capabilities
+            [roles] => Array
+                (
+                    [0] => subscriber
+                )
+
+            [allcaps] => Array
+                (
+                    [read] => 1
+                    [level_0] => 1
+                    [subscriber] => 1
+                )
+
+            [filter] => 
+            [site_id:WP_User:private] => 1
+        )
+
+    [1] => WP_User Object
+        (
+            [data] => stdClass Object
+                (
+                    [ID] => 63
+                    [user_login] => jepyv
+                    [user_pass] => $P$BOzk6tRwxsidXDE1tsn4FQur/UqzqA/
+                    [user_nicename] => jepyv
+                    [user_email] => jepyv@mailinator.com
+                    [user_url] => 
+                    [user_registered] => 2021-03-22 06:44:38
+                    [user_activation_key] => 
+                    [user_status] => 0
+                    [display_name] => jepyv
+                )
+
+            [ID] => 63
+            [caps] => Array
+                (
+                    [subscriber] => 1
+                )
+
+            [cap_key] => wp_capabilities
+            [roles] => Array
+                (
+                    [0] => subscriber
+                )
+
+            [allcaps] => Array
+                (
+                    [read] => 1
+                    [level_0] => 1
+                    [subscriber] => 1
+                )
+
+            [filter] => 
+            [site_id:WP_User:private] => 1
+        )
+
+    [2] => WP_User Object
+        (
+            [data] => stdClass Object
+                (
+                    [ID] => 60
+                    [user_login] => lutadik
+                    [user_pass] => $P$BzvPDSoqyix4C6V48OJoc.nYQJvpNS.
+                    [user_nicename] => lutadik
+                    [user_email] => lutadik@mailinator.com
+                    [user_url] => 
+                    [user_registered] => 2021-03-22 04:48:52
+                    [user_activation_key] => 
+                    [user_status] => 0
+                    [display_name] => lutadik
+                )
+
+            [ID] => 60
+            [caps] => Array
+                (
+                    [subscriber] => 1
+                )
+
+            [cap_key] => wp_capabilities
+            [roles] => Array
+                (
+                    [0] => subscriber
+                )
+
+            [allcaps] => Array
+                (
+                    [read] => 1
+                    [level_0] => 1
+                    [subscriber] => 1
+                )
+
+            [filter] => 
+            [site_id:WP_User:private] => 1
+        )
+
+    [3] => WP_User Object
+        (
+            [data] => stdClass Object
+                (
+                    [ID] => 59
+                    [user_login] => qimifax
+                    [user_pass] => $P$BNa7z3jyFj.vQ.q/q1seTevulLFUAo/
+                    [user_nicename] => qimifax
+                    [user_email] => qimifax@mailinator.com
+                    [user_url] => 
+                    [user_registered] => 2021-03-19 07:54:49
+                    [user_activation_key] => 
+                    [user_status] => 0
+                    [display_name] => qimifax
+                )
+
+            [ID] => 59
+            [caps] => Array
+                (
+                    [subscriber] => 1
+                )
+
+            [cap_key] => wp_capabilities
+            [roles] => Array
+                (
+                    [0] => subscriber
+                )
+
+            [allcaps] => Array
+                (
+                    [read] => 1
+                    [level_0] => 1
+                    [subscriber] => 1
+                )
+
+            [filter] => 
+            [site_id:WP_User:private] => 1
+        )
+
+    [4] => WP_User Object
+        (
+            [data] => stdClass Object
+                (
+                    [ID] => 62
+                    [user_login] => qosyf
+                    [user_pass] => $P$B1H9Rt6uUhtJHeZt0VdHcFTnvKzCXH0
+                    [user_nicename] => qosyf
+                    [user_email] => qosyf@mailinator.com
+                    [user_url] => 
+                    [user_registered] => 2021-03-22 06:44:27
+                    [user_activation_key] => 
+                    [user_status] => 0
+                    [display_name] => qosyf
+                )
+
+            [ID] => 62
+            [caps] => Array
+                (
+                    [subscriber] => 1
+                )
+
+            [cap_key] => wp_capabilities
+            [roles] => Array
+                (
+                    [0] => subscriber
+                )
+
+            [allcaps] => Array
+                (
+                    [read] => 1
+                    [level_0] => 1
+                    [subscriber] => 1
+                )
+
+            [filter] => 
+            [site_id:WP_User:private] => 1
+        )
+
+    [5] => WP_User Object
+        (
+            [data] => stdClass Object
+                (
+                    [ID] => 64
+                    [user_login] => vypytivig
+                    [user_pass] => $P$B1.d1eSIgNla1WgcwwGP0ZTyYj8Cg3.
+                    [user_nicename] => vypytivig
+                    [user_email] => vypytivig@mailinator.com
+                    [user_url] => 
+                    [user_registered] => 2021-03-22 06:44:48
+                    [user_activation_key] => 
+                    [user_status] => 0
+                    [display_name] => vypytivig
+                )
+
+            [ID] => 64
+            [caps] => Array
+                (
+                    [subscriber] => 1
+                )
+
+            [cap_key] => wp_capabilities
+            [roles] => Array
+                (
+                    [0] => subscriber
+                )
+
+            [allcaps] => Array
+                (
+                    [read] => 1
+                    [level_0] => 1
+                    [subscriber] => 1
+                )
+
+            [filter] => 
+            [site_id:WP_User:private] => 1
+        )
+
+)
+
+[22-Mar-2021 10:55:20 UTC] PHP Warning:  count(): Parameter must be an array or an object that implements Countable in C:\xampp\htdocs\wordpressplugin\wp-content\plugins\review-plugin\review-plugin.php on line 227
+[22-Mar-2021 10:55:27 UTC] PHP Warning:  count(): Parameter must be an array or an object that implements Countable in C:\xampp\htdocs\wordpressplugin\wp-content\plugins\review-plugin\review-plugin.php on line 227

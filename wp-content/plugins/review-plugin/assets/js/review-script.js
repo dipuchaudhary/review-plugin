@@ -1,7 +1,7 @@
 /** global rvscript */
 
 jQuery(document).ready( function($) { 
-    
+
     jQuery( '#review-register' ).click( function(e) {
 
         e.preventDefault();
@@ -37,6 +37,31 @@ jQuery(document).ready( function($) {
             }
             
         } )
-    } ) 
+    } );
+    
+    function show_review_data(page) {
+       
+        jQuery.ajax( {
+            url: myAjax.ajaxurl,
+            type: 'POST',
+            datatype: 'json',
+            data: { action: 'review_data', page:page },
+            success: function (response) {
+                            
+                     $('#review').html(response);
+            }
+        })
+     
+  }
+  show_review_data();
+
+  pagination
+  $(document).on("click", ".pagination li a", function(e){
+    e.preventDefault();
+    var pageId = $(this).attr("id");
+    show_review_data(pageId);
+  });
+
+    
    
 } )
