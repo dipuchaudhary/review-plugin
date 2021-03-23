@@ -84,9 +84,12 @@
         public function review_plugin_enqueue_script() {
 
             wp_register_script( 'review_script' , WP_PLUGIN_URL .'/review-plugin/assets/js/review-script.js', array( 'jquery' ), '1.0.0', true );
-            wp_localize_script( 'review_script', 'myAjax', array( 'ajaxurl' => admin_url( 'admin-ajax.php' ),'review_nonce' => wp_create_nonce( 'review_script_nonce' ) ) );
+            wp_register_script( 'filter_script' , WP_PLUGIN_URL .'/review-plugin/assets/js/filter-script.js', array( 'jquery' ), '1.0.0', true );
+            wp_localize_script( 'review_script', 'myAjax', array( 'ajaxurl' => admin_url( 'admin-ajax.php' ), 'review_nonce' => wp_create_nonce( 'review_script_nonce' ) ) );
+            wp_localize_script( 'filter_script', 'filterAjax', array( 'ajaxurl' => admin_url( 'admin-ajax.php' ), 'filter_nonce' => wp_create_nonce( 'filter_script_nonce' ) ) );
             wp_enqueue_script( 'jquery' );
             wp_enqueue_script( 'review_script' );
+            wp_enqueue_script( 'filter_script' );
             wp_enqueue_style( 'style' , plugins_url().'/review-plugin/assets/css/review-style.css', array(), '1.0.0', 'all' );
 
         }
@@ -154,94 +157,105 @@
 
         public function show_review_data() {
 
-            // $args = array(
-            //     'number'        => '5',
-            //     'role'           => 'subscriber',    
-            // );
-    
-            // // The User Query
-            // $users = new WP_User_Query( $args );
-            // $user_array = array();
-            // // The User Loop
-            // if ( ! empty( $users->results ) ) {
-            //     foreach( $users->results as $user ) {
-                    
-            //         $user_id = $user->ID;
-            //         $u['user_email'] = $user->user_email;
-            //         $u['first_name'] = get_user_meta( $user_id,'first_name',true);
-            //         $u['last_name'] = get_user_meta( $user_id,'last_name',true);
-            //         $u['review'] = get_user_meta( $user_id,'review',true);
-            //         $u['rating'] = get_user_meta( $user_id,'rating',true);
-
-            //         array_push($user_array,$u);
-            //     }
-            // } 
-
+            $order = ( isset( $_POST['orderby'] ) ) ? $_POST['orderby']: '';
+            $rating = ( isset( $_POST['rating'] ) ) ? $_POST['rating']: '';
             $output = '';
             $limit = 5;
-            if( isset($_POST['page_no'])) {
+            if( isset( $_POST['page_no'] ) ) {
+
                 $page_no = $_POST['page_no'];
             } 
             else {
                 $page_no = 1;
             }
-            $offset = ($page_no-1) * $limit;
-            $args = array (
-                'number'        => $limit,
-                'offset'        => $offset,
-                'role'          => 'subscriber',
-            );
+            $offset = ( $page_no-1 ) * $limit;
+
+            if ( empty( $rating )) {
+                $args = array (
+                    'number'        => $limit,
+                    'offset'        => $offset,
+                    'role'          => 'subscriber',
+                    'orderby'       => 'registered', 
+                    'order'         => $order,
+                );
+
+            } else {
+                 $args = array (
+                    'number'        => $limit,
+                    'offset'        => $offset,
+                    'role'          => 'subscriber',
+                    'orderby'       => 'registered', 
+                    'order'         => $order,
+                    'meta_query'    => array (
+                        'relation'   => 'OR',
+                                    array (
+                                        'key'   => 'rating',
+                                        'value' => $rating,
+                                        'Compare' => '='
+                                    )
+                    )
+                );
+            }
+           
             $users = new WP_User_Query( $args );
-            if(count($users->results) > 0 ) {
-                foreach( $users->results as $user){
+
+            if( count( $users->results ) > 0 ) {
+
+                foreach( $users->results as $user ) {
+
                     $user_id = $user->ID;
                     $email= $user->user_email;
-                    $fname = get_user_meta( $user_id,'first_name',true);
-                    $lname = get_user_meta( $user_id,'last_name',true);
-                    $review = get_user_meta( $user_id,'review',true);
-                    $rating = get_user_meta( $user_id,'rating',true);
+                    $fname = get_user_meta( $user_id,'first_name',true );
+                    $lname = get_user_meta( $user_id,'last_name',true );
+                    $review = get_user_meta( $user_id,'review',true );
+                    $rating = get_user_meta( $user_id,'rating',true );
 
                     $output .= '<div class="card text-white text-center p-3">
-                    <blockquote class="blockquote mb-0">
-                     <p>'.$review.'</p>
-                    <footer class="blockquote-footer">
-                    <div class="rating">'.$rating.' <span class="fa fa-star checked"></span></div>
-                        <small id="fullname">
-                         '.$fname.' '.$lname.'
-                        </small>
-                        <cite title="Source Title">'.$email.'</cite>
-                    </footer>
-                    </blockquote>
-                    </div>';
+                                 <blockquote class="blockquote mb-0">
+                                 <p>'.$review.'</p>
+                                 <footer class="blockquote-footer">
+                                 <div class="rating">'.$rating.' <span class="fa fa-star checked"></span></div>
+                                    <small id="fullname">
+                                    '.$fname.' '.$lname.'
+                                    </small>
+                                    <cite title="Source Title">'.$email.'</cite>
+                                 </footer>
+                                 </blockquote>
+                                 </div>';
                 }
                 
+            } 
+            else {
+
+                wp_send_json( '<div class="alert alert-dark" role="alert"> No Reviews found!</div>' );
+                
             }
-            $args1 = array(
+
+            $args1 = array (
                 'role' => 'subscriber',
+                'orderby' => 'registered', 
+                
             );
             
-            $ucount_query = new WP_User_Query($args1);
+            $ucount_query = new WP_User_Query( $args1 );
+
             $d = $ucount_query->get_results();
-            $total_users = $d ? count($d) : 1;
-            // $records = count($total_users);
-            $totalpage = ceil($total_users/$limit);
 
-                $output.="<ul class='pagination justify-content-center' style='margin:20px 0'>";
+            $total_reviews = $d ? count( $d ) : 1;
 
-            for ($i=1; $i <= $totalpage ; $i++) { 
-            if ($i == $page_no) {
-                $active = "active";
-            }else{
-                $active = "";
-            }
+            $totalpage = ceil( $total_reviews/$limit );
 
-                $output.="<li class='page-item $active'><a class='page-link' id='$i' href=''>$i</a></li>";
+            $output.="<ul class='pagination justify-content-center' style='margin:200px 0'>";
+
+            for ( $i=1; $i <= $totalpage ; $i++ ) { 
+
+                $output.="<li class='page-item '><a class='page-link' id='$i' href=''>$i</a></li>";
             }
 
             $output .= "</ul>";
-            echo $output;
-            
-            die();
+
+            wp_send_json( $output );
+
         
     }
 

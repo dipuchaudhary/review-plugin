@@ -1,5 +1,3 @@
-/** global rvscript */
-
 jQuery(document).ready( function($) { 
 
     jQuery( '#review-register' ).click( function(e) {
@@ -29,39 +27,16 @@ jQuery(document).ready( function($) {
                     rating: rating,
                 },
             success: function(result) {
-               alert(result.data.msg);
-               document.getElementById('review-form').reset();
+
+                    alert(result.data.msg);
+                    document.getElementById('review-form').reset();
             },
             error: function(result) {
-                alert(result.data.msg);
+                    
+                    alert(result.data.msg);
             }
             
-        } )
-    } );
-    
-    function show_review_data(page) {
-       
-        jQuery.ajax( {
-            url: myAjax.ajaxurl,
-            type: 'POST',
-            datatype: 'json',
-            data: { action: 'review_data', page:page },
-            success: function (response) {
-                            
-                     $('#review').html(response);
-            }
         })
-     
-  }
-  show_review_data();
-
-  pagination
-  $(document).on("click", ".pagination li a", function(e){
-    e.preventDefault();
-    var pageId = $(this).attr("id");
-    show_review_data(pageId);
-  });
-
-    
+    }); 
    
-} )
+})

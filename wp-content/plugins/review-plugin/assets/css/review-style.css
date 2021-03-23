@@ -1,3 +1,4 @@
+
 .review-container {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -9,7 +10,15 @@
     background: #2193b0;  /* fallback for old browsers */
     background: -webkit-linear-gradient(to right, #6dd5ed, #2193b0);  /* Chrome 10-25, Safari 5.1-6 */
     background: linear-gradient(to right, #6dd5ed, #2193b0); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
 
+.review-container .card .blockquote {
+     height: 350px;
+     width: auto;
+}
+
+.review-container .card .blockquote p {
+    text-align: justify;
 }
 
 .review-container .rating {
@@ -28,4 +37,46 @@
 .review-container .rating span {
     color:  #f99500;
     font-size: 0.8rem;
+}
+
+/* pagination */
+
+.pagination li {
+    list-style-type: none;
+    display: inline-block;
+    margin: 100px 0;
+    padding: 1px;
+
+}
+
+.pagination li a {
+    display: inline-block;
+    width: 50px;
+    height: 25px;
+    text-align: center;
+    background: #289dcc;
+    color: #fff;
+
+}
+
+.pagination li a:hover {
+    background: #033d88;
+}
+div .alert {
+    position: relative;
+    padding: .75rem 1.25rem;
+    margin-bottom: 1rem;
+    border: 1px solid transparent;
+    border-radius: .25rem;
+    height: 3rem;
+    width: 170%;
+  }
+
+div .alert-dark {
+    color: #1b1e21;
+    background-color: #d6d8d9;
+    border-color: #c6c8ca;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
 }
