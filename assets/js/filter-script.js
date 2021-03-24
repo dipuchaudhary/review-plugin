@@ -1,6 +1,6 @@
 jQuery(document).ready( function($) {
 
-    var data = {action: 'review_data'};
+    var data = {action: 'review_data_listing'};
     
     // get value of orderby
     $('#order').on('click', function() {
