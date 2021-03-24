@@ -157,9 +157,9 @@
                     update_user_meta( $user_id,'first_name',$fname );
                     update_user_meta( $user_id,'last_name',$lname );
                     
-                    $this->send_email();
-                    
                     wp_send_json_success( array( 'msg' => __('User Registered successfully','review-plugin') ) );
+
+                    $this->send_email();
                    
                 }
                  
