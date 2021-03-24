@@ -82,8 +82,8 @@
                 return ob_get_clean();
             } 
             else {
-                
-                    echo "Please Login first to view Reviews";
+
+                 esc_html_e( 'Please Login first to view reviews', 'review-plugin' );
             }
              
         }
@@ -107,7 +107,7 @@
         public function get_username( $email ) {
             
                 
-                $rvemail = ( isset ($_POST['email'] ) ? $_POST['email'] : ''  );
+                $rvemail = ( isset ($_POST['email'] ) ? sanitize_text_field( $_POST['email'] ) : ''  );
                 
                 $email = strstr( $rvemail, '@', true );
                 
@@ -171,13 +171,13 @@
     /** show review data */
         public function show_review_data() {
 
-            $order = ( isset( $_POST['orderby'] ) ) ? $_POST['orderby']: '';
-            $rating = ( isset( $_POST['rating'] ) ) ? $_POST['rating']: '';
+            $order = ( isset( $_POST['orderby'] ) ) ? sanitize_text_field( $_POST['orderby'] ): '';
+            $rating = ( isset( $_POST['rating'] ) ) ? sanitize_text_field( $_POST['rating'] ): '';
             $output = '';
             $limit = 5;
             if( isset( $_POST['page_no'] ) ) {
 
-                $page_no = $_POST['page_no'];
+                $page_no = sanitize_text_field( $_POST['page_no'] );
             } 
             else {
                 $page_no = 1;
@@ -218,13 +218,13 @@
 
                     $output .= '<div class="card text-white text-center p-3">
                                  <blockquote class="blockquote mb-0">
-                                 <p>'.$review.'</p>
+                                 <p>'.__( $review ).'</p>
                                  <footer class="blockquote-footer">
-                                 <div class="rating">'.$rating.' <span class="fa fa-star checked"></span></div>
+                                 <div class="rating">'.__( $rating ).' <span class="fa fa-star checked"></span></div>
                                     <small id="fullname">
-                                    '.$fname.' '.$lname.'
+                                    '.__( $fname ).' '.__( $lname ).'
                                     </small>
-                                    <cite title="Source Title">'.$email.'</cite>
+                                    <cite title="Source Title">'.__( $email ).'</cite>
                                  </footer>
                                  </blockquote>
                                  </div>';
@@ -233,7 +233,7 @@
               } 
             else {
 
-                wp_send_json( '<div class="alert alert-dark" role="alert"> No Reviews found!</div>' );
+                wp_send_json( __('<div class="alert alert-dark" role="alert">No Reviews found!</div>', 'review-plugin' ) );
                 
             }
 
@@ -248,12 +248,12 @@
 
             for ( $i=1; $i <= $totalpage ; $i++ ) { 
 
-                $output.="<li class='page-item '><a class='page-link' id='$i' href=''>$i</a></li>";
+                $output.= __( "<li class='page-item '><a class='page-link' id='$i' href=''> $i</a></li>", 'review-plugin' );
             }
 
             $output .= "</ul>";
 
-            wp_send_json( $output );
+            wp_send_json( __( $output ) );
         } 
 
 

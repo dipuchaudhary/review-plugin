@@ -1,0 +1,57 @@
+[24-Mar-2021 04:07:54 UTC] PHP Parse error:  syntax error, unexpected 'esc_html_e' (T_STRING) in C:\xampp\htdocs\wordpressplugin\wp-content\plugins\review-plugin\review-plugin.php on line 251
+[24-Mar-2021 04:08:01 UTC] PHP Parse error:  syntax error, unexpected 'esc_html_e' (T_STRING) in C:\xampp\htdocs\wordpressplugin\wp-content\plugins\review-plugin\review-plugin.php on line 251
+[24-Mar-2021 04:08:02 UTC] PHP Parse error:  syntax error, unexpected 'esc_html_e' (T_STRING) in C:\xampp\htdocs\wordpressplugin\wp-content\plugins\review-plugin\review-plugin.php on line 251
+[24-Mar-2021 04:08:47 UTC] PHP Warning:  A non-numeric value encountered in C:\xampp\htdocs\wordpressplugin\wp-content\plugins\review-plugin\review-plugin.php on line 185
+[24-Mar-2021 04:08:47 UTC] WordPress database error You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '-5, 5' at line 5 for query SELECT SQL_CALC_FOUND_ROWS wp_users.* FROM wp_users INNER JOIN wp_usermeta ON ( wp_users.ID = wp_usermeta.user_id ) WHERE 1=1 AND ( 
+  ( 
+    ( wp_usermeta.meta_key = 'wp_capabilities' AND wp_usermeta.meta_value LIKE '%\"subscriber\"%' )
+  )
+) ORDER BY user_registered DESC LIMIT -5, 5 made by do_action('wp_ajax_review_data'), WP_Hook->do_action, WP_Hook->apply_filters, ReviewPlugin->show_review_data, WP_User_Query->__construct, WP_User_Query->query
+[24-Mar-2021 04:08:51 UTC] PHP Warning:  A non-numeric value encountered in C:\xampp\htdocs\wordpressplugin\wp-content\plugins\review-plugin\review-plugin.php on line 185
+[24-Mar-2021 04:08:51 UTC] WordPress database error You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '-5, 5' at line 5 for query SELECT SQL_CALC_FOUND_ROWS wp_users.* FROM wp_users INNER JOIN wp_usermeta ON ( wp_users.ID = wp_usermeta.user_id ) WHERE 1=1 AND ( 
+  ( 
+    ( wp_usermeta.meta_key = 'wp_capabilities' AND wp_usermeta.meta_value LIKE '%\"subscriber\"%' )
+  )
+) ORDER BY user_registered DESC LIMIT -5, 5 made by do_action('wp_ajax_review_data'), WP_Hook->do_action, WP_Hook->apply_filters, ReviewPlugin->show_review_data, WP_User_Query->__construct, WP_User_Query->query
+[24-Mar-2021 04:08:52 UTC] PHP Warning:  A non-numeric value encountered in C:\xampp\htdocs\wordpressplugin\wp-content\plugins\review-plugin\review-plugin.php on line 185
+[24-Mar-2021 04:08:52 UTC] WordPress database error You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '-5, 5' at line 5 for query SELECT SQL_CALC_FOUND_ROWS wp_users.* FROM wp_users INNER JOIN wp_usermeta ON ( wp_users.ID = wp_usermeta.user_id ) WHERE 1=1 AND ( 
+  ( 
+    ( wp_usermeta.meta_key = 'wp_capabilities' AND wp_usermeta.meta_value LIKE '%\"subscriber\"%' )
+  )
+) ORDER BY user_registered DESC LIMIT -5, 5 made by do_action('wp_ajax_review_data'), WP_Hook->do_action, WP_Hook->apply_filters, ReviewPlugin->show_review_data, WP_User_Query->__construct, WP_User_Query->query
+[24-Mar-2021 04:08:52 UTC] PHP Warning:  A non-numeric value encountered in C:\xampp\htdocs\wordpressplugin\wp-content\plugins\review-plugin\review-plugin.php on line 185
+[24-Mar-2021 04:08:52 UTC] WordPress database error You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '-5, 5' at line 5 for query SELECT SQL_CALC_FOUND_ROWS wp_users.* FROM wp_users INNER JOIN wp_usermeta ON ( wp_users.ID = wp_usermeta.user_id ) WHERE 1=1 AND ( 
+  ( 
+    ( wp_usermeta.meta_key = 'wp_capabilities' AND wp_usermeta.meta_value LIKE '%\"subscriber\"%' )
+  )
+) ORDER BY user_registered DESC LIMIT -5, 5 made by do_action('wp_ajax_review_data'), WP_Hook->do_action, WP_Hook->apply_filters, ReviewPlugin->show_review_data, WP_User_Query->__construct, WP_User_Query->query
+[24-Mar-2021 04:08:53 UTC] PHP Warning:  A non-numeric value encountered in C:\xampp\htdocs\wordpressplugin\wp-content\plugins\review-plugin\review-plugin.php on line 185
+[24-Mar-2021 04:08:53 UTC] WordPress database error You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '-5, 5' at line 5 for query SELECT SQL_CALC_FOUND_ROWS wp_users.* FROM wp_users INNER JOIN wp_usermeta ON ( wp_users.ID = wp_usermeta.user_id ) WHERE 1=1 AND ( 
+  ( 
+    ( wp_usermeta.meta_key = 'wp_capabilities' AND wp_usermeta.meta_value LIKE '%\"subscriber\"%' )
+  )
+) ORDER BY user_registered DESC LIMIT -5, 5 made by do_action('wp_ajax_review_data'), WP_Hook->do_action, WP_Hook->apply_filters, ReviewPlugin->show_review_data, WP_User_Query->__construct, WP_User_Query->query
+[24-Mar-2021 04:08:53 UTC] PHP Warning:  A non-numeric value encountered in C:\xampp\htdocs\wordpressplugin\wp-content\plugins\review-plugin\review-plugin.php on line 185
+[24-Mar-2021 04:08:53 UTC] WordPress database error You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '-5, 5' at line 5 for query SELECT SQL_CALC_FOUND_ROWS wp_users.* FROM wp_users INNER JOIN wp_usermeta ON ( wp_users.ID = wp_usermeta.user_id ) WHERE 1=1 AND ( 
+  ( 
+    ( wp_usermeta.meta_key = 'wp_capabilities' AND wp_usermeta.meta_value LIKE '%\"subscriber\"%' )
+  )
+) ORDER BY user_registered DESC LIMIT -5, 5 made by do_action('wp_ajax_review_data'), WP_Hook->do_action, WP_Hook->apply_filters, ReviewPlugin->show_review_data, WP_User_Query->__construct, WP_User_Query->query
+[24-Mar-2021 04:08:53 UTC] PHP Warning:  A non-numeric value encountered in C:\xampp\htdocs\wordpressplugin\wp-content\plugins\review-plugin\review-plugin.php on line 185
+[24-Mar-2021 04:08:53 UTC] WordPress database error You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '-5, 5' at line 5 for query SELECT SQL_CALC_FOUND_ROWS wp_users.* FROM wp_users INNER JOIN wp_usermeta ON ( wp_users.ID = wp_usermeta.user_id ) WHERE 1=1 AND ( 
+  ( 
+    ( wp_usermeta.meta_key = 'wp_capabilities' AND wp_usermeta.meta_value LIKE '%\"subscriber\"%' )
+  )
+) ORDER BY user_registered DESC LIMIT -5, 5 made by do_action('wp_ajax_review_data'), WP_Hook->do_action, WP_Hook->apply_filters, ReviewPlugin->show_review_data, WP_User_Query->__construct, WP_User_Query->query
+[24-Mar-2021 04:08:54 UTC] PHP Warning:  A non-numeric value encountered in C:\xampp\htdocs\wordpressplugin\wp-content\plugins\review-plugin\review-plugin.php on line 185
+[24-Mar-2021 04:08:54 UTC] WordPress database error You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '-5, 5' at line 5 for query SELECT SQL_CALC_FOUND_ROWS wp_users.* FROM wp_users INNER JOIN wp_usermeta ON ( wp_users.ID = wp_usermeta.user_id ) WHERE 1=1 AND ( 
+  ( 
+    ( wp_usermeta.meta_key = 'wp_capabilities' AND wp_usermeta.meta_value LIKE '%\"subscriber\"%' )
+  )
+) ORDER BY user_registered DESC LIMIT -5, 5 made by do_action('wp_ajax_review_data'), WP_Hook->do_action, WP_Hook->apply_filters, ReviewPlugin->show_review_data, WP_User_Query->__construct, WP_User_Query->query
+[24-Mar-2021 04:08:54 UTC] PHP Warning:  A non-numeric value encountered in C:\xampp\htdocs\wordpressplugin\wp-content\plugins\review-plugin\review-plugin.php on line 185
+[24-Mar-2021 04:08:54 UTC] WordPress database error You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '-5, 5' at line 5 for query SELECT SQL_CALC_FOUND_ROWS wp_users.* FROM wp_users INNER JOIN wp_usermeta ON ( wp_users.ID = wp_usermeta.user_id ) WHERE 1=1 AND ( 
+  ( 
+    ( wp_usermeta.meta_key = 'wp_capabilities' AND wp_usermeta.meta_value LIKE '%\"subscriber\"%' )
+  )
+) ORDER BY user_registered DESC LIMIT -5, 5 made by do_action('wp_ajax_review_data'), WP_Hook->do_action, WP_Hook->apply_filters, ReviewPlugin->show_review_data, WP_User_Query->__construct, WP_User_Query->query

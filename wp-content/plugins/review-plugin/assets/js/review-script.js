@@ -11,7 +11,12 @@ jQuery(document).ready( function($) {
         var rating = $("#rating").val();
         
         if( '' === fname || '' === lname || '' === email || '' === pass || '' === review || '' === rating ) {
-            alert("please fill out all the fields");
+            $("#errfname").text("First Name is required!");
+            $("#errlname").text("First Name is required!");
+            $("#erremail").text("First Name is required!");
+            $("#errpass").text("First Name is required!");
+            $("#errreview").text("First Name is required!");
+            $("#errrating").text("First Name is required!");
         }
             jQuery.ajax({
                 url: myAjax.ajaxurl,
