@@ -11,12 +11,13 @@ jQuery(document).ready( function($) {
         var rating = $("#rating").val();
         
         if( '' === fname || '' === lname || '' === email || '' === pass || '' === review || '' === rating ) {
+
             $("#errfname").text("First Name is required!");
-            $("#errlname").text("First Name is required!");
-            $("#erremail").text("First Name is required!");
-            $("#errpass").text("First Name is required!");
-            $("#errreview").text("First Name is required!");
-            $("#errrating").text("First Name is required!");
+            $("#errlname").text("Last Name is required!");
+            $("#erremail").text("Email is required!");
+            $("#errpass").text("Password is required!");
+            $("#errreview").text("Review Description is required!");
+            $("#errrating").text("Rating is required!");
         }
             jQuery.ajax({
                 url: myAjax.ajaxurl,
