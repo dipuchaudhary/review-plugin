@@ -55,3 +55,23 @@
     ( wp_usermeta.meta_key = 'wp_capabilities' AND wp_usermeta.meta_value LIKE '%\"subscriber\"%' )
   )
 ) ORDER BY user_registered DESC LIMIT -5, 5 made by do_action('wp_ajax_review_data'), WP_Hook->do_action, WP_Hook->apply_filters, ReviewPlugin->show_review_data, WP_User_Query->__construct, WP_User_Query->query
+[24-Mar-2021 06:15:19 UTC] PHP Parse error:  syntax error, unexpected 'wp_send_json_success' (T_STRING) in C:\xampp\htdocs\wordpressplugin\wp-content\plugins\review-plugin\review-plugin.php on line 162
+[24-Mar-2021 06:36:56 UTC] PHP Notice:  Undefined index: email in C:\xampp\htdocs\wordpressplugin\wp-content\plugins\review-plugin\review-plugin.php on line 177
+[24-Mar-2021 06:36:57 UTC] PHP Notice:  Undefined index: email in C:\xampp\htdocs\wordpressplugin\wp-content\plugins\review-plugin\review-plugin.php on line 177
+[24-Mar-2021 06:36:59 UTC] PHP Notice:  Undefined index: email in C:\xampp\htdocs\wordpressplugin\wp-content\plugins\review-plugin\review-plugin.php on line 177
+[24-Mar-2021 06:37:02 UTC] PHP Notice:  Undefined index: email in C:\xampp\htdocs\wordpressplugin\wp-content\plugins\review-plugin\review-plugin.php on line 177
+[24-Mar-2021 06:37:03 UTC] PHP Notice:  Undefined index: email in C:\xampp\htdocs\wordpressplugin\wp-content\plugins\review-plugin\review-plugin.php on line 177
+[24-Mar-2021 06:37:04 UTC] PHP Notice:  Undefined index: email in C:\xampp\htdocs\wordpressplugin\wp-content\plugins\review-plugin\review-plugin.php on line 177
+[24-Mar-2021 06:37:04 UTC] PHP Notice:  Undefined index: email in C:\xampp\htdocs\wordpressplugin\wp-content\plugins\review-plugin\review-plugin.php on line 177
+[24-Mar-2021 06:37:10 UTC] PHP Notice:  Undefined index: email in C:\xampp\htdocs\wordpressplugin\wp-content\plugins\review-plugin\review-plugin.php on line 177
+[24-Mar-2021 06:37:19 UTC] PHP Notice:  Undefined index: email in C:\xampp\htdocs\wordpressplugin\wp-content\plugins\review-plugin\review-plugin.php on line 177
+[24-Mar-2021 06:44:19 UTC] PHP Notice:  Undefined variable:  in C:\xampp\htdocs\wordpressplugin\wp-content\plugins\review-plugin\review-plugin.php on line 180
+[24-Mar-2021 06:44:19 UTC] PHP Notice:  Undefined variable:  in C:\xampp\htdocs\wordpressplugin\wp-content\plugins\review-plugin\review-plugin.php on line 180
+[24-Mar-2021 06:44:20 UTC] PHP Notice:  Undefined variable:  in C:\xampp\htdocs\wordpressplugin\wp-content\plugins\review-plugin\review-plugin.php on line 180
+[24-Mar-2021 06:44:22 UTC] PHP Notice:  Undefined variable:  in C:\xampp\htdocs\wordpressplugin\wp-content\plugins\review-plugin\review-plugin.php on line 180
+[24-Mar-2021 06:44:24 UTC] PHP Notice:  Undefined variable:  in C:\xampp\htdocs\wordpressplugin\wp-content\plugins\review-plugin\review-plugin.php on line 180
+[24-Mar-2021 06:44:24 UTC] PHP Notice:  Undefined variable:  in C:\xampp\htdocs\wordpressplugin\wp-content\plugins\review-plugin\review-plugin.php on line 180
+[24-Mar-2021 06:44:26 UTC] PHP Notice:  Undefined variable:  in C:\xampp\htdocs\wordpressplugin\wp-content\plugins\review-plugin\review-plugin.php on line 180
+[24-Mar-2021 06:44:31 UTC] PHP Notice:  Undefined variable:  in C:\xampp\htdocs\wordpressplugin\wp-content\plugins\review-plugin\review-plugin.php on line 180
+[24-Mar-2021 06:44:31 UTC] PHP Notice:  Undefined variable:  in C:\xampp\htdocs\wordpressplugin\wp-content\plugins\review-plugin\review-plugin.php on line 180
+[24-Mar-2021 06:44:32 UTC] PHP Notice:  Undefined variable:  in C:\xampp\htdocs\wordpressplugin\wp-content\plugins\review-plugin\review-plugin.php on line 180

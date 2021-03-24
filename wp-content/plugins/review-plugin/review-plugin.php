@@ -44,6 +44,7 @@
             add_action( 'wp_ajax_nopriv_review_register', array( $this, 'review_register' ) );
             add_action( 'wp_ajax_review_data', array( $this, 'show_review_data' ) );
             add_filter( 'username', array($this, 'get_username' ) );
+            add_action( 'init', array( $this, 'send_email' ) );
 
         }
 
@@ -156,6 +157,8 @@
                     update_user_meta( $user_id,'first_name',$fname );
                     update_user_meta( $user_id,'last_name',$lname );
                     
+                    $this->send_email();
+                    
                     wp_send_json_success( array( 'msg' => __('User Registered successfully','review-plugin') ) );
                    
                 }
@@ -167,6 +170,17 @@
             }
            
     }
+
+    /** send email  */
+
+    public function send_email() {
+        $email = ( isset($_POST['email'] ) ) ? sanitize_email( $_POST['email'] ) : '';
+        $username = $this->get_username( $email );
+        $subject = "Welcome";
+        $message = "Welcome ". $username .", Thanks for Registering with us.";
+        wp_mail( $email,$subject,$message );
+    }
+
 
     /** show review data */
         public function show_review_data() {
