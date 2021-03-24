@@ -19,7 +19,7 @@ jQuery(document).ready( function($) {
             data.page_no = 1;
             show_review_data(data);
     })
-
+    
     function show_review_data(data) {
 
             jQuery.ajax( {

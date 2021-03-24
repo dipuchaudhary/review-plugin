@@ -28,7 +28,6 @@
         }
 
         /** review plugin load text domain */
-
         public function review_plugin_load_text_domain() {
 
             load_plugin_textdomain( 'review-plugin', false, dirname( plugin_basename( __FILE__ ) ) .'/languages/' );
@@ -42,6 +41,7 @@
             add_shortcode( 'rv_show_code', array( $this, 'show_review_template' ) );
             add_action( 'wp_enqueue_scripts', array( $this, 'review_plugin_enqueue_script' ) );
             add_action( 'wp_ajax_review_register', array( $this, 'review_register' ) );
+            add_action( 'wp_ajax_nopriv_review_register', array( $this, 'review_register' ) );
             add_action( 'wp_ajax_review_data', array( $this, 'show_review_data' ) );
             add_filter( 'username', array($this, 'get_username' ) );
 
@@ -65,22 +65,30 @@
             register_post_type( 'review', [ 'public' => true, 'label' => 'Review', 'menu_icon' => 'dashicons-star-half' ] );
         }
 
-        /** review shortcode */
+        /** Include add review template */
         public function review_shortcode() {
-
             ob_start();
             require_once 'templates/register.php';
             return ob_get_clean();
         }
 
+        /** Include show review template */
         public function show_review_template() {
 
-            ob_start();
-            require_once 'templates/show-review.php';
-            return ob_get_clean();
+            if( is_user_logged_in() ) {
+
+                ob_start();
+                require_once 'templates/show-review.php';
+                return ob_get_clean();
+            } 
+            else {
+                
+                    echo "Please Login first to view Reviews";
+            }
+             
         }
         
-
+        /** Register and Enqueue script and style */
         public function review_plugin_enqueue_script() {
 
             wp_register_script( 'review_script' , WP_PLUGIN_URL .'/review-plugin/assets/js/review-script.js', array( 'jquery' ), '1.0.0', true );
@@ -94,6 +102,8 @@
 
         }
 
+        /** extract username from email using filter */
+
         public function get_username( $email ) {
             
                 
@@ -105,10 +115,13 @@
             
         }
 
+        /** Add review */
+
         public function review_register() {
 
             if( ! isset( $_POST['review_nonce'] ) || ! wp_verify_nonce( $_POST['review_nonce'], 'review_script_nonce' ) ) {
-                return;
+
+                  return;
             }
 
             $fname = sanitize_text_field( $_POST['fname'] );
@@ -155,6 +168,7 @@
            
     }
 
+    /** show review data */
         public function show_review_data() {
 
             $order = ( isset( $_POST['orderby'] ) ) ? $_POST['orderby']: '';
@@ -170,33 +184,25 @@
             }
             $offset = ( $page_no-1 ) * $limit;
 
-            if ( empty( $rating )) {
-                $args = array (
-                    'number'        => $limit,
-                    'offset'        => $offset,
-                    'role'          => 'subscriber',
-                    'orderby'       => 'registered', 
-                    'order'         => $order,
-                );
-
-            } else {
-                 $args = array (
-                    'number'        => $limit,
-                    'offset'        => $offset,
-                    'role'          => 'subscriber',
-                    'orderby'       => 'registered', 
-                    'order'         => $order,
-                    'meta_query'    => array (
+            $args = array (
+                'number'        => $limit,
+                'offset'        => $offset,
+                'role'          => 'subscriber',
+                'orderby'       => 'registered', 
+                'order'         => $order,
+            );
+            if ( ! empty( $rating )) {
+                
+                 $args['meta_query'] =  array (
                         'relation'   => 'OR',
                                     array (
                                         'key'   => 'rating',
                                         'value' => $rating,
                                         'Compare' => '='
                                     )
-                    )
-                );
+                                    );
             }
-           
+
             $users = new WP_User_Query( $args );
 
             if( count( $users->results ) > 0 ) {
@@ -222,26 +228,19 @@
                                  </footer>
                                  </blockquote>
                                  </div>';
-                }
+                   }
                 
-            } 
+              } 
             else {
 
                 wp_send_json( '<div class="alert alert-dark" role="alert"> No Reviews found!</div>' );
                 
             }
 
-            $args1 = array (
-                'role' => 'subscriber',
-                'orderby' => 'registered', 
-                
-            );
-            
-            $ucount_query = new WP_User_Query( $args1 );
 
-            $d = $ucount_query->get_results();
+            $total_users = $users->get_total();
 
-            $total_reviews = $d ? count( $d ) : 1;
+            $total_reviews = $total_users ?  $total_users  : 1;
 
             $totalpage = ceil( $total_reviews/$limit );
 
@@ -255,9 +254,8 @@
             $output .= "</ul>";
 
             wp_send_json( $output );
+        } 
 
-        
-    }
 
 
 }
