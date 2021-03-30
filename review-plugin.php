@@ -183,7 +183,8 @@
             $limit = 5;
             if( isset( $_POST['page_no'] ) ) {
 
-                $page_no = sanitize_text_field( $_POST['page_no'] );
+                $page_no = absint( sanitize_text_field( $_POST['page_no'] ) );
+
             } 
             else {
                 $page_no = 1;
