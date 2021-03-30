@@ -211,7 +211,7 @@
             }
 
             $users = new WP_User_Query( $args );
-            if( count( $users->results ) > 0 ) {
+            if( isset($users->results) && count( $users->results ) > 0 ) {
 
                 foreach( $users->results as $user ) {
 
