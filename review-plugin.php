@@ -100,7 +100,7 @@
 
         public function get_username( $email ) {
             
-                $rvemail = ( isset ($_POST['email'] ) ? sanitize_text_field( $_POST['email'] ) : ''  );
+                $rvemail = ( isset ($_POST['email'] ) ? sanitize_email( $_POST['email'] ) : ''  );
                 $email = strstr( $rvemail, '@', true );
                 
                 return $email;
@@ -168,8 +168,8 @@
 
         $email = ( isset($_POST['email'] ) ) ? sanitize_email( $_POST['email'] ) : '';
         $username = $this->get_username( $email );
-        $subject = "Welcome";
-        $message = "Welcome ". $username .", Thanks for Registering with us.";
+        $subject = __( "Welcome", "review-plugin" );
+        $message = __( "Welcome ". $username .", Thanks for Registering with us.", "review-plugin" );
         wp_mail( $email,$subject,$message );
     }
 
@@ -225,13 +225,13 @@
 
                         $output .= '<div class="card text-white text-center p-3">
                                     <blockquote class="blockquote mb-0">
-                                    <p>'.__( $review ).'</p>
+                                    <p>'.esc_html__( $review, "review-plugin" ).'</p>
                                     <footer class="blockquote-footer">
-                                    <div class="rating">'.__( $rating ).' <span class="fa fa-star checked"></span></div>
+                                    <div class="rating">'.esc_html__( $rating, "review-plugin" ).' <span class="fa fa-star checked"></span></div>
                                         <small id="fullname">
-                                        '.__( $fname ).' '.__( $lname ).'
+                                        '.esc_html__( $fname, "review-plugin" ).' '.esc_html__( $lname, "review-plugin" ).'
                                         </small>
-                                        <cite title="Source Title">'.__( $email ).'</cite>
+                                        <cite title="Source Title">'.esc_html__( $email, "review-plugin" ).'</cite>
                                     </footer>
                                     </blockquote>
                                     </div>';
@@ -240,7 +240,7 @@
               } 
             else {
 
-                wp_send_json( __('<div class="alert alert-dark" role="alert">No Reviews found!</div>', 'review-plugin' ) );
+                wp_send_json( '<div class="alert alert-dark" role="alert">'.__( "No Reviews found!", "review-plugin" ).'</div>' );
                 
             }
 
@@ -253,7 +253,7 @@
                 $output.= __( "<li class='page-item '><a class='page-link' id='$i' href=''> $i</a></li>", 'review-plugin' );
             }
             $output .= "</ul>";
-            wp_send_json( __( $output ) );
+            wp_send_json(  $output );
         } 
 
 

@@ -1,6 +1,6 @@
 jQuery(document).ready( function($) { 
 
-    jQuery( '#review-register' ).click( function(e) {
+    $( '#review-register' ).click( function(e) {
 
         e.preventDefault();
         var fname = $("#fname").val();
@@ -12,14 +12,14 @@ jQuery(document).ready( function($) {
         
         if( '' === fname || '' === lname || '' === email || '' === pass || '' === review || '' === rating ) {
 
-            $("#errfname").text("First Name is required!");
-            $("#errlname").text("Last Name is required!");
-            $("#erremail").text("Email is required!");
-            $("#errpass").text("Password is required!");
-            $("#errreview").text("Review Description is required!");
-            $("#errrating").text("Rating is required!");
+            $("#errfname").text( __( "First Name is required!", "review-plugin" ) );
+            $("#errlname").text( __( "Last Name is required!", "review-plugin" ) );
+            $("#erremail").text(  __( "Email is required!", "review-plugin" ) );
+            $("#errpass").text(  __( "Password is required!", "review-plugin" ) );
+            $("#errreview").text( __( "Review Description is required!", "review-plugin" ) );
+            $("#errrating").text( __( "Rating is required!", "review-plugin" ) );
         }
-            jQuery.ajax({
+            $.ajax({
                 url: myAjax.ajaxurl,
                 type: "POST",
                 data: {
