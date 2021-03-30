@@ -89,10 +89,19 @@
             wp_register_script( 'review_filter_script' , WP_PLUGIN_URL .'/review-plugin/assets/js/filter-script.js', array( 'jquery' ), '1.0.0', true );
             wp_localize_script( 'review_script', 'myAjax', array( 'ajaxurl' => admin_url( 'admin-ajax.php' ), 'review_nonce' => wp_create_nonce( 'review_script_nonce' ) ) );
             wp_localize_script( 'review_filter_script', 'filterAjax', array( 'ajaxurl' => admin_url( 'admin-ajax.php' ), 'review_filter_nonce' => wp_create_nonce( 'review_filter_script_nonce' ) ) );
-            wp_enqueue_script( 'jquery' );
             wp_enqueue_script( 'review_script' );
             wp_enqueue_script( 'review_filter_script' );
             wp_enqueue_style( 'rv_style' , plugins_url().'/review-plugin/assets/css/review-style.css', array(), '1.0.0', 'all' );
+
+            $translate_array = array(
+                'errfname' => __( "First Name is required!", "review-plugin" ),
+                'errlname' => __( "Last Name is required!", "review-plugin" ),
+                'erremail' => __( "Email is required!", "review-plugin" ),
+                'errpass' => __( "Password is required!", "review-plugin" ),
+                'errreview' => __( "Review Description is required!", "review-plugin" ),
+                'errrating' => __( "Rating is required!", "review-plugin" ),  
+            );
+            wp_localize_script( 'review_script','translated_object',$translate_array );
 
         }
 

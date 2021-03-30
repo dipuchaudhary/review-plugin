@@ -12,12 +12,12 @@ jQuery(document).ready( function($) {
         
         if( '' === fname || '' === lname || '' === email || '' === pass || '' === review || '' === rating ) {
 
-            $("#errfname").text( __( "First Name is required!", "review-plugin" ) );
-            $("#errlname").text( __( "Last Name is required!", "review-plugin" ) );
-            $("#erremail").text(  __( "Email is required!", "review-plugin" ) );
-            $("#errpass").text(  __( "Password is required!", "review-plugin" ) );
-            $("#errreview").text( __( "Review Description is required!", "review-plugin" ) );
-            $("#errrating").text( __( "Rating is required!", "review-plugin" ) );
+            $("#errfname").text( translated_object.errfname );
+            $("#errlname").text( translated_object.errlname );
+            $("#erremail").text( translated_object.erremail );
+            $("#errpass").text( translated_object.errpass );
+            $("#errreview").text( translated_object.errreview );
+            $("#errrating").text( translated_object.errrating );
         }
             $.ajax({
                 url: myAjax.ajaxurl,
