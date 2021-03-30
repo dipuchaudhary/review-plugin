@@ -85,6 +85,9 @@ div .alert-dark {
 
 /* error  */
 
-#review-form .form-group .error {
+/* #review-form .form-group .error {
+    color:red;
+} */
+.active {
     color:red;
 }
